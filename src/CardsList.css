@@ -1,0 +1,16 @@
+.CardsList {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  grid-gap: 10px;
+  margin-left: 190px;
+  margin-right: 190px;
+  margin-top: 30px;
+}
+@media (max-width: 1170px) and (min-width: 950px) {
+  .CardsList {
+    grid-template-columns: repeat(3, 200px);
+    grid-gap: 10px;
+    margin-left: 250px;
+    margin-right: 250px;
+  }
+}
