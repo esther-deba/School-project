@@ -1,0 +1,39 @@
+.profile-card {
+  background-color: white;
+  margin-left: 250px;
+  margin-right: 250px;
+  border-radius: 15px;
+
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+}
+.personal-information {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.profile-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+.name {
+  font-size: 30px;
+}
+.more {
+  display: flex;
+  flex-direction: row;
+  color: #ff9d17;
+  font-size: 18px;
+  cursor: pointer;
+}
+.more-icon {
+  margin-top: 2px;
+}

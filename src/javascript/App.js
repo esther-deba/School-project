@@ -1,6 +1,10 @@
 import { Header } from './Header';
 import { SearchBar } from './SearchBar';
-import { CardsList } from './CardsList';
+// import { CardsList } from './CardsList';
+import { ProfileCardsList } from './ProfileCardsList';
+import { Footer } from './Footer';
+import './App.css';
+
 // import { FaFacebookF } from 'react-icons/fa';
 // import { FaInstagram } from 'react-icons/fa';
 // import { IoMdHome } from 'react-icons/fa';
@@ -13,11 +17,14 @@ import { CardsList } from './CardsList';
 
 function App() {
   return (
-    <>
-      <Header></Header>
-      <SearchBar />
-      <CardsList />
-    </>
+    <div className='page-container'>
+      <div className='content-wrap'>
+        <Header></Header>
+        <SearchBar />
+        <ProfileCardsList />
+      </div>
+      <Footer />
+    </div>
   );
 }
 
