@@ -1,0 +1,59 @@
+.sign-up .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sign-up .todo {
+  margin-top: 40px;
+}
+.sign-up .new-user-information {
+  display: flex;
+  flex-direction: row;
+}
+.sign-up input::placeholder {
+  color: #e5e5e5;
+}
+.sign-up input:focus {
+  outline: none;
+}
+.sign-up input {
+  height: 30px;
+  text-align: center;
+  border-radius: 7px;
+  border: 0.01em solid #7f7f7f;
+  width: 250px;
+}
+.sign-up .left-side {
+  margin-right: 25px;
+}
+.sign-up .right-side {
+  margin-left: 25px;
+}
+
+.sign-up .expand {
+  color: #7f7f7f;
+  cursor: pointer;
+}
+.sign-up .bottom {
+  text-align: center;
+}
+.sign-up .create {
+  margin-bottom: 20px;
+  background-color: #ff8b13;
+  color: white;
+  font-weight: 800;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 8px;
+  margin-top: 70px;
+  cursor: pointer;
+  margin-bottom: 35px;
+  font-size: 16px;
+}
+.sign-up .to-enter {
+  margin-bottom: 10px;
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 400;
+}

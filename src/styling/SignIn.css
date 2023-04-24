@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.man {
+  height: 600px;
+}
+.user-inputs {
+  display: flex;
+  flex-direction: column;
+}
+.username-input:focus,
+.password-input:focus {
+  outline: none;
+}
+.username-input::placeholder,
+.password-input::placeholder {
+  color: #e5e5e5;
+}
+
+.username-input,
+.password-input {
+  margin-bottom: 25px;
+  height: 40px;
+  text-align: center;
+  border-radius: 6px;
+  border: 0.01em solid #7f7f7f;
+}
+
+.todo {
+  color: #ff8b13;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 37px;
+  text-align: center;
+  -webkit-text-stroke: 0.8px #fa4301;
+  width: 300px;
+  margin-bottom: 35px;
+}
+.information {
+  text-align: center;
+}
+.login {
+  margin-bottom: 20px;
+  background-color: #ff8b13;
+  color: white;
+  font-weight: 800;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  margin-bottom: 35px;
+  font-size: 16px;
+}
+.under-login {
+  height: 0.01em;
+  width: 200px;
+  margin-left: 50px;
+  background-color: #e5e5e5;
+  margin-bottom: 35px;
+}
+.no-account {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.to-sign-up {
+  color: #fa4301;
+  font-weight: 800;
+  font-size: 16px;
+}
