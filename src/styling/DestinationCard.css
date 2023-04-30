@@ -12,6 +12,7 @@
   position: absolute;
   left: 40px;
 }
+
 .left-orange-bloc {
   height: 259px;
   width: 217px;
@@ -21,7 +22,7 @@
   border-bottom-left-radius: 20px;
   position: relative;
 }
-.photo {
+.destination-card .photo {
   height: 250px;
   border-style: solid;
   border-width: 2px;
@@ -45,21 +46,6 @@
   right: 0;
   bottom: 0;
 }
-.get-place {
-  color: white;
-  background-color: #1c1b1b;
-  padding-left: 22px;
-  padding-right: 22px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  font-size: 15px;
-  border-radius: 6px;
-  bottom: 20px;
-  left: 30px;
-  position: absolute;
-  border-style: none;
-  cursor: pointer;
-}
 .person {
   display: flex;
   flex-direction: row;
@@ -79,20 +65,21 @@
 }
 .left-orange-bloc .icon {
   position: absolute;
-  right: -205px;
-  font-size: 20px;
+  left: 20px;
+  font-size: 30px;
   top: 15px;
+  color: white;
 }
 .left-orange-bloc .destination {
-  font-size: 35px;
+  font-size: 32px;
   position: absolute;
-  right: -130px;
+  right: -190px;
   top: 20px;
 }
 .wilaya-commune {
-  font-size: 20px;
+  font-size: 18px;
   position: absolute;
-  right: -138px;
+  right: -170px;
   top: 55px;
 }
 .left-orange-bloc .description {
@@ -100,6 +87,6 @@
   position: absolute;
   right: -200px;
   top: 100px;
-  width: 250px;
+  width: 275px;
   text-indent: 35px;
 }
