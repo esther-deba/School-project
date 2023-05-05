@@ -1,0 +1,62 @@
+.add-destination {
+    background-color: white;
+    height: 450px;
+    width: 1000px;
+    margin: 20px calc(50vw - 500px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-destination button {
+    padding: 10px 16px;
+    font-size: 18px;
+    background-color: #d9d9d9;
+    border-style: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.add-destination button:active {
+    opacity: 0.8;
+}
+
+.add-destination h1 {
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.add-destination p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #888;
+    width: 400px;
+    text-align: center;
+    line-height: 25px;
+}
+
+@media screen and (max-width:1000px) {
+    .add-destination {
+        width: 600px;
+        margin: 20px calc(50vw - 300px);
+    }
+}
+
+@media screen and (max-width:600px) {
+    .add-destination {
+        width: 400px;
+        margin: 20px calc(50vw - 200px);
+        gap: 10px;
+    }
+
+    .add-destination h1 {
+        font-size: 1.3em;
+    }
+
+    .add-destination p {
+        font-size: 1.1em;
+        width: 70%;
+    }
+}

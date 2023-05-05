@@ -1,30 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
 .SearchBar {
   display: flex;
   flex-direction: row;
   background-color: white;
   height: 40px;
   align-items: center;
-  padding-left: 20px;
-  padding-right: 10px;
+  padding: 0 10px 0 20px;
   border-radius: 8px;
   justify-content: space-between;
-  margin-left: 190px;
-  margin-right: 190px;
-  margin-top: 80px;
+  margin: 80px 20vw 0 20vw;
   position: relative;
-  max-width: 810px;
+  width: 60vw;
 }
-input {
+
+.SearchBar input {
   background-color: transparent;
   border: none;
   width: 550px;
   left: 155px;
   position: absolute;
   top: 10px;
+  padding-left: 10px;
+  font-size: 18px;
 }
+
 input:focus {
   outline: none;
 }
+.mode {
+  font-size: 1.3em;
+}
+
 .left,
 .middle,
 .right,
@@ -33,10 +42,12 @@ input:focus {
   flex-direction: row;
   align-items: center;
 }
+
 .left {
   height: 30px;
   padding-right: 20px;
 }
+
 .left-plus {
   height: 30px;
   padding-right: 20px;
@@ -45,21 +56,53 @@ input:focus {
   border-right-color: rgb(237, 237, 237);
   cursor: pointer;
 }
+
+.mode-container {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+}
+
 .expand {
   color: #fa4301;
   margin-left: 10px;
   margin-top: 2px;
   font-size: 22px;
 }
+
+.mode-box-container {
+  position: absolute;
+  z-index: 12;
+  top: 100%;
+  left: -5px;
+  border-radius: 5px;
+  overflow: hidden;
+  border: grey 1px solid;
+}
+
+.mode-box {
+  padding: 10px 10px;
+  background-color: white;
+}
+
+.no {
+  margin-top: 20px;
+}
+
+.SearchBar .orange-selected {
+  background-color: #fa4301;
+  color: white;
+}
+
 .search-logo {
   margin-left: 10px;
   border-right-width: 1px;
   border-right-style: solid;
   border-right-color: rgb(237, 237, 237);
-  height: 30px;
-  font-size: 22px;
+  font-size: 2em;
   padding-right: 10px;
 }
+
 .plus {
   font-size: 22px;
   border-right-width: 1px;
@@ -72,26 +115,30 @@ input:focus {
   border-left-style: solid;
   border-left-color: rgb(237, 237, 237);
 }
+
 .info {
-  font-size: 23px;
+  font-size: 1.6em;
   margin-left: 10px;
+  cursor: pointer;
+}
+.SearchBar .more-information {
+  position: absolute;
+  width: 400px;
+  background-color: #ff9e178c;
+  border-radius: 12px;
+  padding: 5px 10px;
+  top: 40px;
+  right: 0;
 }
 
-@media (min-width: 1190px) and (max-width: 1211px) {
+@media screen and (max-width: 500px) {
   .SearchBar {
-    margin-left: 250px;
-    margin-right: 250px;
+    width: 94vw;
+    margin-left: 3vw;
   }
-  input {
-    width: 450px;
-  }
-}
-@media (max-width: 1190px) and (min-width: 950px) {
-  .SearchBar {
-    margin-left: 250px;
-    margin-right: 250px;
-  }
-  input {
-    width: 350px;
+
+  .mode-container {
+    font-size: 0.9rem;
+    width: 70px;
   }
 }

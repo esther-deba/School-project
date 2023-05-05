@@ -1,0 +1,54 @@
+.publication {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin: 20px 0;
+}
+
+.publication .publisher {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.publication .publisher .name {
+    font-size: 1.3em;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.publication .publisher img {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.publication h2 {
+    font-weight: 100;
+    font-size: 1.2em;
+    margin: 10px 20px;
+}
+
+.publication>img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.publications .likes {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: fit-content;
+    padding: 5px 2px;
+}
+
+.publication .likes {
+    font-size: 1.7em;
+}
+
+.publication .likes>:nth-child(2) {
+    font-size: 1.1em;
+    color: red;
+}

@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .sign-up h1 {
   color: #ff8b13;
   font-family: 'Inter';
@@ -17,6 +18,7 @@
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
 .sign-up .new-user-information {
   display: grid;
   grid-template-columns: repeat(2, 255px);
@@ -26,16 +28,20 @@
   width: 560px;
   margin: 0 calc(50vw - 280px);
 }
+
 .sign-up .new-user-information p {
   margin: 0;
   margin-bottom: 5px;
 }
+
 .sign-up input::placeholder {
   color: #e5e5e5;
 }
+
 .sign-up input:focus {
   outline: none;
 }
+
 .sign-up input {
   height: 30px;
   text-align: center;
@@ -43,33 +49,18 @@
   border: 0.01em solid #7f7f7f;
   width: 250px;
 }
+
+
+
+
+
+
+
+
 .sign-up .select-photo-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #888;
-  border: #888 solid 1px;
-  height: 205px;
-  border-radius: 6px;
-  width: 180px;
+  margin-left: 0;
 }
-.sign-up .select-photo-container p {
-  width: 160px;
-  text-align: center;
-}
-.sign-up .select-photo-container button {
-  border: solid 1px red;
-  color: red;
-  padding: 8px 18px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
-}
-.sign-up .select-photo-container button:active {
-  background-color: rgba(255, 0, 0, 0.283);
-  color: white;
-}
+
 .sign-up .bottom {
   display: flex;
   flex-direction: column;
@@ -77,6 +68,7 @@
   justify-content: center;
   gap: 30px;
 }
+
 .sign-up .container-photo-valide {
   display: flex;
   align-items: center;
@@ -95,8 +87,24 @@
   font-size: 16px;
   transition: opacity 0.2s;
 }
+
 .sign-up .create:active {
   opacity: 0.8;
+}
+
+
+
+.sign-up .sign-in-link {
+  font-size: .9em;
+  font-weight: 800;
+  color: #ff8b13;
+  cursor: pointer;
+}
+
+.image-preview {
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 600px) {
@@ -109,12 +117,14 @@
     width: 300px;
     height: 340px;
   }
+
   .sign-up .container-photo-valide {
     flex-direction: column;
     margin-top: 30px;
   }
 }
+
 .sign-up .passwords-dont-match {
   color: red;
-  font-size: 18px;
+  font-size: .9em;
 }

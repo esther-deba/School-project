@@ -1,0 +1,113 @@
+form.add-publication {
+  background-color: white;
+  height: 80vh;
+  width: 800px;
+  margin: 10vh calc(50vw - 400px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+form.add-publication h1 {
+  color: #ff8b13;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 37px;
+  text-align: center;
+  -webkit-text-stroke: 0.8px #fa4301;
+}
+
+form.add-publication button.publish-button {
+  background-color: transparent;
+  border: #ff9d17 solid 2px;
+  color: #ff9d17;
+  font-weight: 800;
+  padding: 10px 20px;
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+form.add-publication textarea {
+  width: 300px;
+  padding: 10px 10px;
+}
+form.add-publication textarea::placeholder {
+  color: #888;
+}
+form.add-publication textarea:focus {
+  outline: none;
+}
+form.add-publication input::placeholder {
+  color: #888;
+}
+
+.link-with-a-destination {
+  padding: 5px 10px;
+}
+.destination-input {
+  color: red;
+}
+
+form.add-publication .select-photo-container {
+  width: 210px;
+  margin-left: 0;
+}
+
+form.add-publication > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+form.add-publication .destinations-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  top: 65px;
+  left: 0px;
+  width: 180px;
+  z-index: 10000;
+}
+
+form.add-publication > div > div .destination {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 180px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 2px;
+  position: relative;
+  font-size: 0.9em;
+  padding: 4px 6px;
+}
+
+form.add-publication > div > div .destination :nth-child(2) {
+  font-size: 0.6em;
+}
+@media screen and (max-width: 810px) {
+  form.add-publication {
+    width: 500px;
+    margin: 10vh calc(50vw - 250px);
+  }
+  form.add-publication textarea {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 500px) {
+  form.add-publication {
+    width: 350px;
+    margin: 10vh calc(50vw - 175px);
+  }
+  form.add-publication textarea {
+    width: 200px;
+  }
+}

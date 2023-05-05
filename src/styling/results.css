@@ -1,0 +1,93 @@
+.CardsList {
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  padding-bottom: 250px;
+  min-height: 100vh;
+}
+
+.destinations-list {
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  justify-content: center;
+  column-gap: 10px;
+  row-gap: 18px;
+  width: 800px;
+  margin: 30px calc(50vw - 400px);
+}
+
+.profiles-list {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 5px));
+  grid-gap: 10px;
+  width: 60vw;
+  margin-left: 20vw;
+}
+
+
+@media (max-width: 1100px) {
+  .destinations-list {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    justify-content: center;
+    gap: 10px;
+    width: 800px;
+    margin: 30px calc(50vw - 400px);
+  }
+}
+
+@media (max-width: 840px) {
+  .CardsList {
+    padding-bottom: 450px;
+  }
+
+  .destinations-list {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    justify-content: center;
+    gap: 10px;
+    width: 740px;
+    margin: 30px calc(50vw - 370px);
+  }
+}
+
+@media screen and (max-width:1200px) {
+  .profiles-list {
+    grid-template-columns: 100%;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .destinations-list {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    justify-content: center;
+    gap: 10px;
+    width: 600px;
+    margin: 30px calc(50vw - 300px);
+  }
+
+  .profiles-list {
+    width: 80vw;
+    margin: 30px 10vw;
+  }
+}
+
+@media screen and (max-width:900px) {
+  .CardsList {
+    padding-bottom: 360px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .destinations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin: 20px 0;
+  }
+}

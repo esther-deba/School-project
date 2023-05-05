@@ -1,24 +1,31 @@
-.container {
+.sign-in .container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  background-color: white;
+  height: 100vh;
 }
+
 a {
   text-decoration: none;
   color: black;
 }
+
 .man {
   height: 600px;
 }
+
 .user-inputs {
   display: flex;
   flex-direction: column;
 }
+
 .username-input:focus,
 .password-input:focus {
   outline: none;
 }
+
 .username-input::placeholder,
 .password-input::placeholder {
   color: #e5e5e5;
@@ -45,10 +52,12 @@ a {
   width: 300px;
   margin-bottom: 35px;
 }
+
 .information {
   text-align: center;
 }
-.login {
+
+.sign-in .login {
   margin-bottom: 20px;
   background-color: #ff8b13;
   color: white;
@@ -61,6 +70,7 @@ a {
   margin-bottom: 35px;
   font-size: 16px;
 }
+
 .under-login {
   height: 0.01em;
   width: 200px;
@@ -68,12 +78,33 @@ a {
   background-color: #e5e5e5;
   margin-bottom: 35px;
 }
+
 .no-account {
   font-size: 15px;
   margin-bottom: 20px;
 }
+
 .to-sign-up {
+  background-color: transparent;
+  border: none;
   color: #fa4301;
   font-weight: 800;
   font-size: 16px;
+  cursor: pointer;
+}
+
+.login-fail-message {
+  color: red;
+  font-size: .9em;
+}
+
+@media screen and (max-width:880px) {
+  .man {
+    display: none;
+  }
+
+  form.sign-in {
+    height: 500px;
+    margin-top: calc(50vh - 250px);
+  }
 }

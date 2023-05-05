@@ -1,23 +1,40 @@
+.destination-card-publication {
+    background-color: rgb(237, 237, 237);
+    width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+    padding-bottom: 250px;
+}
+
 .publication-container {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
+
 .separator {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 20px;
-  margin-left: 150px;
-  margin-right: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
 }
+
 .separator .lign {
-  background-color: #888888;
-  height: 1px;
-  width: 350px;
+    background-color: #888888;
+    height: 1px;
+    width: 350px;
 }
+
 .separator .text {
-  color: #888888;
-  margin: 0;
-  width: 80px;
+    color: #888888;
+    margin: 0;
+    width: 80px;
+}
+
+@media screen and (max-width:900px) {
+    .destination-card-publication {
+        padding-bottom: 390px;
+    }
 }
