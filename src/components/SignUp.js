@@ -1,10 +1,6 @@
 import '../styling/SignUp.css';
-import { MdKeyboardArrowRight } from 'react-icons/md';
-import { MdOutlineExpandMore } from 'react-icons/md';
 import { Navigate } from 'react-router-dom';
 import React, { useContext, useState } from 'react';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
 import { EndPointContext } from '../context/EndPointContext';
 import { SHA256 } from 'crypto-js';
 import axios from 'axios';
@@ -17,9 +13,13 @@ export const SignUp = () => {
   const [passwordMatch, setPasswordMatch] = useState(true);
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+  const [progress, setProgress] = useState('');
+  const [hidePassword, setHidePassword] = useState(true);
+
   const [pic, setPic] = useState();
   const { endpoint } = useContext(EndPointContext);
   console.log(username, password, email);
+
   const handleLogin = () => {
     setNav(true);
   };
@@ -50,6 +50,44 @@ export const SignUp = () => {
       return;
     }
   };
+
+  const handlePassword = (passwordValue) => {
+    const strengthChecks = {
+      length: 0,
+      hasUpperCase: false,
+      hasLowerCase: false,
+      hasDigit: false,
+      hasSpecialChar: false,
+    };
+
+    strengthChecks.length = passwordValue.length >= 8 ? true : false;
+    strengthChecks.hasUpperCase = /[A-Z]+/.test(passwordValue);
+    strengthChecks.hasLowerCase = /[a-z]+/.test(passwordValue);
+    strengthChecks.hasDigit = /[0-9]+/.test(passwordValue);
+    strengthChecks.hasSpecialChar = /[^A-Za-z0-9]+/.test(passwordValue);
+
+    let verifiedList = Object.values(strengthChecks).filter((value) => value);
+
+    let strength =
+      verifiedList.length == 5
+        ? 'Strong'
+        : verifiedList.length >= 2
+        ? 'Medium'
+        : 'Weak';
+
+    setPassword(passwordValue);
+    setProgress(`${(verifiedList.length / 5) * 100}%`);
+    setMessage(strength);
+
+    console.log('verifiedList: ', `${(verifiedList.length / 5) * 100}%`);
+  };
+
+  const getActiveColor = (type) => {
+    if (type === 'Strong') return '#8BC926';
+    if (type === 'Medium') return '#FEBD01';
+    return '#FF0054';
+  };
+
   return (
     <form className='sign-up' onSubmit={handleSignUp}>
       <h1>Create a new account</h1>
@@ -74,13 +112,45 @@ export const SignUp = () => {
             value={email}
           />
         </div>
-        <div>
+        <div className='pass'>
           <p>Password</p>
-          <input
-            type='password'
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-          />
+          <div className='input-box'>
+            <input
+              type={hidePassword ? 'password' : 'text'}
+              value={password}
+              onChange={({ target }) => {
+                handlePassword(target.value);
+              }}
+            />
+            <a
+              href='#'
+              className='toggle-btn'
+              onClick={() => {
+                setHidePassword(!hidePassword);
+              }}
+            >
+              <span
+                className='material-icons eye-icon'
+                style={{ color: !hidePassword ? '#FF0054' : '#c3c3c3' }}
+              >
+                visibility
+              </span>
+            </a>
+          </div>
+          <div className='progress-bg'>
+            <div
+              className='progress'
+              style={{
+                width: progress,
+                backgroundColor: getActiveColor(message),
+              }}
+            ></div>
+          </div>
+          {password.length !== 0 ? (
+            <p className='message' style={{ color: getActiveColor(message) }}>
+              Your password is {message}
+            </p>
+          ) : null}
         </div>
         <div>
           <p>Confirm password</p>

@@ -214,7 +214,6 @@ img.slidinigimg {
 
 .theservecies {
   height: 500px;
-
   background-color: #ffffff;
   display: flex;
   justify-content: center;
@@ -236,7 +235,6 @@ img.slidinigimg {
 
 .home-page p {
   max-width: 700px;
-  font-size: 25px;
 }
 
 .home-page span {
@@ -309,6 +307,12 @@ button.submit {
   border-radius: 5px;
   border: none;
 }
+@media screen and (max-width: 3000px) {
+  .aboutus-para {
+    font-size: 22px !important;
+    margin-left: 20px;
+  }
+}
 
 @media (max-width: 1200px) {
   .serviceimg {
@@ -332,8 +336,8 @@ button.submit {
     line-height: 35px;
   }
 
-  p.aboutus-para {
-    font-size: 20px !important;
+  .aboutus-para {
+    font-size: 22px !important;
     margin-left: 20px;
   }
 
@@ -395,6 +399,9 @@ button.submit {
     height: 100px;
     width: 100px;
   }
+  .aboutus-para {
+    width: 500px;
+  }
 
   a.add-destination-service,
   a.add-publication-servive,
@@ -435,6 +442,11 @@ button.submit {
 
   .circle {
     height: 100px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .aboutus-para {
+    width: 400px;
   }
 }
 

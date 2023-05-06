@@ -51,8 +51,8 @@ footer ul {
   width: 100%;
   padding-left: 10%;
 }
-
 footer li {
+  color: white;
   list-style: none;
   cursor: pointer;
   font-weight: 400;

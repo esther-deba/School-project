@@ -176,4 +176,73 @@
     list-style: none;
     width: 100px;
   }
+  .mobile .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 19px;
+  }
+
+  .mobile .buttons > button:nth-child(2) {
+    height: 35px;
+    width: 80px;
+  }
+
+  .mobile .buttons > button:nth-child(1) {
+    height: 20px;
+    width: 65px;
+    position: relative;
+    z-index: 100;
+    background-color: white;
+    color: red;
+    cursor: pointer;
+  }
+
+  .mobile .buttons > button:first-child::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -9px;
+    left: -9px;
+    width: 80px;
+    height: 35px;
+    z-index: -12;
+    border-radius: 4px;
+  }
+
+  .mobile .buttons > button:first-child::after {
+    content: 'Sign-in';
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    width: 74px;
+    height: 29px;
+    background: white;
+    z-index: 1;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fa4301;
+  }
+
+  .mobile .buttons .sign-out:first-child::after {
+    content: 'Logout';
+    cursor: pointer;
+  }
+
+  .mobile .buttons > button:first-child::before,
+  .mobile .buttons > button:nth-child(2) {
+    background-color: white;
+    background: linear-gradient(145deg, #fa4301, #ff9d17);
+    border-radius: 6px;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  li .buttons {
+    height: 100px;
+  }
 }

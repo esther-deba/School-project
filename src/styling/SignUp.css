@@ -42,20 +42,14 @@
   outline: none;
 }
 
-.sign-up input {
+.sign-up input[type='text'],
+.sign-up input[type='password'] {
   height: 30px;
   text-align: center;
   border-radius: 7px;
   border: 0.01em solid #7f7f7f;
   width: 250px;
 }
-
-
-
-
-
-
-
 
 .sign-up .select-photo-container {
   margin-left: 0;
@@ -92,10 +86,8 @@
   opacity: 0.8;
 }
 
-
-
 .sign-up .sign-in-link {
-  font-size: .9em;
+  font-size: 0.9em;
   font-weight: 800;
   color: #ff8b13;
   cursor: pointer;
@@ -122,9 +114,12 @@
     flex-direction: column;
     margin-top: 30px;
   }
+  .sign-up .pass {
+    margin: 21px;
+  }
 }
 
 .sign-up .passwords-dont-match {
   color: red;
-  font-size: .9em;
+  font-size: 0.9em;
 }
