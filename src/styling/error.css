@@ -1,0 +1,16 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 150px;
+  margin: calc(50vh - 100px) calc(50vw - 100px);
+  color: #888;
+  gap: 10px;
+}
+.error .icon {
+  color: #fa4301;
+  font-size: 40px;
+  font-weight: bold;
+}
