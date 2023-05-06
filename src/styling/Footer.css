@@ -74,6 +74,9 @@ footer > div:nth-child(2) > div:nth-child(2) > div {
   justify-content: center;
   gap: 25px;
 }
+footer .footer-icon {
+  color: white;
+}
 
 @media screen and (max-width: 900px) {
   footer {

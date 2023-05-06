@@ -48,12 +48,30 @@ export const Footer = () => {
 
         <div>
           <div>
-            <FaInstagram />
-            <FaFacebookF />
+            <Link
+              to='https://www.instagram.com/assikelcodeam/?hl=fr'
+              target='blank'
+            >
+              <FaInstagram className='footer-icon' />
+            </Link>
+
+            <Link
+              to='https://www.facebook.com/profile.php?id=100092221823177'
+              target='blank'
+            >
+              <FaFacebookF className='footer-icon' />
+            </Link>
           </div>
           <div>
-            <FaTwitter />
-            <GrLinkedinOption />
+            <Link to='https://twitter.com/ASSIKELCodEam' target='blank'>
+              <FaTwitter className='footer-icon' />
+            </Link>
+            <Link
+              to='https://www.linkedin.com/in/code-eam-5b93b5275/'
+              target='blank'
+            >
+              <GrLinkedinOption className='footer-icon' />
+            </Link>
           </div>
         </div>
       </div>
